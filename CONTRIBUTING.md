@@ -35,6 +35,7 @@ Uso de ramas
 
 - No trabajar directamente sobre `main` salvo para cambios menores o creación de carpetas vacías.
 1- Crear una rama por tarea o ejercicio (se puede hacer desde directamente desde GitHub, o en tu PC si tenés GIT).
+
 1.1- Desde la web GitHub:
 
 	1. Entrá al repositorio.
