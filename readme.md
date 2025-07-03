@@ -11,4 +11,6 @@ Repositorio colaborativo para subir, compartir y resolver ejercicios prácticos 
 
 **¿Donde ver y subir las resoluciones?**
 - Haciendo click en el recuadro de arriba a la izquierda "Main", pueden seleccionar la rama específica del TP que quiera mirar o subir.
+- Luego, cada rama tiene la siguiente estructura: - "Resoluciones/" acá ven los archivos .java
+                                                  - "Consigna" archivo .md con las consignas del tp  
   
