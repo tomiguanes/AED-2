@@ -2,7 +2,7 @@
 
 import java.util.Scanner; 
 
-public class TrabajoSeis {
+public class TP6_tomi {
     
     public static void main(String[] args) {
         //Creo "input" de tipo Scanner para que el usuario ingrese longitud del array 
