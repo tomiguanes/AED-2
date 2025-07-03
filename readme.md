@@ -4,12 +4,11 @@ Repositorio colaborativo para subir, compartir y resolver ejercicios prácticos 
 **Este espacio tiene como fin:**
 
 - Practicar la programación en Java.
-- Practicar el uso de control de versiones GitHub y repositorios grupales.
+- Practicar el uso de control de versiones en GitHub y repositorios grupales.
 - Compartir resoluciones individuales o grupales de los trabajos prácticos.
-- Aprender juntos y mejorar nuestras habilidades de codificación.
-- Llevar registro y control de versiones de nuestros avances.
+- Aprender juntos y mejorar nuestras habilidades.
 
-**¿Donde ver y subir las resoluciones?**
+**¿Dónde ver y subir las resoluciones?**
 - Haciendo click en el recuadro de arriba a la izquierda "Main", pueden seleccionar la rama específica del TP que quiera mirar o subir.
 - Luego, cada rama tiene la siguiente estructura: - "Resoluciones/" acá ven los archivos .java
                                                   - "Consigna" archivo .md con las consignas del tp  
