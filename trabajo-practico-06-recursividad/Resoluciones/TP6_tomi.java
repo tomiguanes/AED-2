@@ -1,6 +1,6 @@
 /*TRABAJO PRACTICO NUMERO 6: ARREGLOS Y RECURSIVIDA. RESUELTO HASTA: PUNTO 5*/
 
-import java.util.Scanner 
+import java.util.Scanner; 
 
 public class TrabajoSeis {
     
@@ -31,6 +31,8 @@ public class TrabajoSeis {
         invertir(arreglo,0); 
         System.out.println("Arreglo invertido:");
         mostrarArreglo(arreglo, arreglo.length - 1);
+
+        input.close();
     }
     
   
@@ -45,7 +47,7 @@ public static void cargar (int[]arreglo, Scanner input){
 public static void mostrarInverso (int[]arreglo, int index){
     //Caso base: el arreglo tiene longitud 1
     if (index==0){
-        System.out.print(arreglo[index]);
+        System.out.println(arreglo[index]);
     }
     //Caso recursivo: imprimo el ultimo valor del arreglo, luego llamo y disminuyo en 1.
     else {
@@ -58,7 +60,7 @@ public static void mostrarInverso (int[]arreglo, int index){
 public static void mostrarArreglo (int[]arreglo, int index){
     //Caso base: el arreglo tiene longitud 1
     if (index==0){
-        System.out.print(arreglo[index]);
+        System.out.println(arreglo[index]);
     }
     //Caso recursivo: imprimo el ultimo valor del arreglo, luego llamo y disminuyo en 1.
     else {
