@@ -8,3 +8,7 @@ Repositorio colaborativo para subir, compartir y resolver ejercicios prácticos 
 - Compartir resoluciones individuales o grupales de los trabajos prácticos.
 - Aprender juntos y mejorar nuestras habilidades de codificación.
 - Llevar registro y control de versiones de nuestros avances.
+
+**¿Donde ver y subir las resoluciones?**
+- Haciendo click en el recuadro de arriba a la izquierda "Main", pueden seleccionar la rama específica del TP que quiera mirar o subir.
+  
