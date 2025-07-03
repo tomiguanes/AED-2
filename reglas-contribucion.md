@@ -6,9 +6,9 @@ Estructura de Carpetas
 
 - Las carpetas deben seguir esta estructura:
 
-/clase-01-introduccion/
-/clase-02-condicionales/
-/clase-03-iteracion/
+/trabajo-practico-01-introduccion/
+/trabajo-practico-02-condicionales/
+/trabajo-practico-03-iteracion/
 
 - Usar **minúsculas y guiones medios (`-`)**.
 - No usar espacios, tildes ni símbolos especiales.
@@ -23,7 +23,7 @@ Convención de nombres de archivos
   - `MostrarTemperaturas.java`
 - Si hay versiones por integrante:
   - `Ejercicio3_Tomas.java`
-  - `Ejercicio3_Rocio.java`
+  - `Ejercicio3_Estefania.java`
 
 ### Archivos Markdown o texto:
 - `readme.md`, `instrucciones.md`, `guia-ramas.md`
