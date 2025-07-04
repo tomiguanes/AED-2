@@ -28,7 +28,7 @@ public class TP6_tomi {
         boolean esta = contiene(arreglo, arreglo.length - 1, num);
         System.out.println("¿El número está presente? " + esta);
 
-        invertir(arreglo,0); 
+        invertir(arreglo,arreglo.length-1); 
         System.out.println("Arreglo invertido:");
         mostrarArreglo(arreglo, arreglo.length - 1);
 
@@ -94,23 +94,21 @@ public static boolean contiene(int[]arreglo, int index, int num){
 }
 
   //Metodo recursivo que invierte los elementos del array
-public static void invertir(int[] arreglo, int inicio) {
+public static void invertirDesdeFin(int[] arreglo, int fin) {
     // Caso base: ya llegamos al centro
-    if (inicio == arreglo.length / 2) {
+    if (fin == arreglo.length / 2) {
         return;
     } else {
-        // Calculo el índice opuesto
-        int fin = arreglo.length - 1 - inicio;
+        int inicio = arreglo.length - 1 - fin;
 
-        // Intercambio los valores en las posiciones
-        int temp = arreglo[inicio];
+        int aux = arreglo[inicio];
         arreglo[inicio] = arreglo[fin];
-        arreglo[fin] = temp;
+        arreglo[fin] = aux;
 
-        // Llamada recursiva
-        invertir(arreglo, inicio + 1);
+        invertirDesdeFin(arreglo, fin - 1);
     }
 }
+
  
 
 }
