@@ -94,7 +94,7 @@ public static boolean contiene(int[]arreglo, int index, int num){
 }
 
  // Metodo recursivo que invierte los elementos del array
-public static void invertirDesdeFin(int[] arreglo, int index) {
+public static void invertir(int[] arreglo, int index) {
     //C.B: el arreglo tiene longitud 1
     if (index == 0) {
         return;
@@ -109,7 +109,7 @@ public static void invertirDesdeFin(int[] arreglo, int index) {
             arreglo[opuesto] = aux;
         }
 
-        invertirDesdeFin(arreglo, index - 1); // llamada recursiva
+        invertir(arreglo, index - 1); // llamada recursiva
     }
 }
 
