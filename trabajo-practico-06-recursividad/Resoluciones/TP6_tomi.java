@@ -93,21 +93,26 @@ public static boolean contiene(int[]arreglo, int index, int num){
    }
 }
 
-  //Metodo recursivo que invierte los elementos del array
-public static void invertirDesdeFin(int[] arreglo, int fin) {
-    // Caso base: ya llegamos al centro
-    if (fin == arreglo.length / 2) {
+ // Metodo recursivo que invierte los elementos del array
+public static void invertirDesdeFin(int[] arreglo, int index) {
+    //C.B: el arreglo tiene longitud 1
+    if (index == 0) {
         return;
-    } else {
-        int inicio = arreglo.length - 1 - fin;
+    } 
+    /*C.R: recorremos el arreglo (index-1) calculando el índice opuesto al actual y solo intercambia si aún no se cruzaron.*/ 
+    else {
+        int opuesto = arreglo.length - 1 - index;
+        //verifico que index sea mayor al opuesto para no realizar doble inversion y devolver el arreglo original
+        if (index > opuesto) {
+            int aux = arreglo[index];
+            arreglo[index] = arreglo[opuesto];
+            arreglo[opuesto] = aux;
+        }
 
-        int aux = arreglo[inicio];
-        arreglo[inicio] = arreglo[fin];
-        arreglo[fin] = aux;
-
-        invertirDesdeFin(arreglo, fin - 1);
+        invertirDesdeFin(arreglo, index - 1); // llamada recursiva
     }
 }
+
 
  
 
