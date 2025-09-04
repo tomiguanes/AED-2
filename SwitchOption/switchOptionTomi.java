@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class switchOption {
@@ -12,7 +13,8 @@ public class switchOption {
             System.out.println("1. Operaciones básicas.");
             System.out.println("2. Comparaciones y búsquedas.");
             System.out.println("3. Subcadenas y reemplazos.");
-            System.out.println("4. Subcadenas y reemplazos.");
+            System.out.println("4. Validaciones.");
+            System.out.println("5. Manipulacion avanzada.");
             System.out.println("0. Salir");
             System.out.print("Elegí una opción: ");
             opcion = input.nextInt();
@@ -31,6 +33,11 @@ public class switchOption {
                 case 4:
                        validaciones(input);
                        break;
+                case 5:
+                       manipulacionAvanzada(input);
+                       break;
+                case 0:
+                        break;
                 default:
                         System.out.println("Numero invalido, pruebe nuevamente.");
                         break;
@@ -151,5 +158,27 @@ public class switchOption {
         
     }
     
-    
-}
+    public static void manipulacionAvanzada (Scanner input){
+        System.out.print("Ingrese una frase: ");
+        String frase = input.nextLine();
+        
+            String fraseTrim = frase.trim();
+        
+            String fraseSinVocales = fraseTrim.replaceAll("[aeiouáéíóúüAEIOUÁÉÍÓÚÜ]", "*");
+            
+        System.out.println("Frase (trim): " + fraseTrim);
+        System.out.println("Frase con vocales reemplazadas: " + fraseSinVocales);
+        
+        
+        System.out.print("Ingrese una lista de nombres separados por comas (ej: Ana, Juan, Pedro, Maria): ");
+            String linea = input.nextLine();
+            String[] nombresInput = linea.split(",");
+                
+                for (int i=0; i<nombresInput.length; i++){
+                    String limpio = nombresInput[i].trim(); // elimina espacios extras
+                    System.out.println(limpio.toUpperCase());
+            }
+        }
+            
+        
+    }
