@@ -1,30 +1,22 @@
-/*2. Comparaciones y búsquedas 
-Dadas dos palabras ingresadas por teclado: 
-• Verificar si son iguales  
-• Verificar cuál es mayor alfabéticamente  
-• Ver si una contiene a la otra  
-Ingresar un texto y una palabra: 
-• Indicar si la palabra aparece en el texto  
-• Mostrar la última posición donde aparece */
-import java.util.Scanner;
-
-public class NewMain1 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-    //creacion scanner
-    Scanner input=new Scanner(System.in);
+public static void comparacionesYBusquedas (Scanner input){
+//solicitar palabra 1 
+    String wordOne;
+    do {
+        System.out.print("Ingrese la primera palabra: ");
+        wordOne = input.nextLine().trim();
+        if (wordOne.isEmpty()){
+            System.out.println("La palabra no puede estar vacia.");
+        }
+    } while (wordOne.isEmpty());
     
-    //solicitar palabra 1 
-    System.out.println("Ingrese la primera palabra: ");
-    String wordOne = input.nextLine().trim();
-     
     //solicitar palabra 2
-    System.out.println("Ingrese la segunda palabra: ");
-    String wordTwo = input.nextLine().trim();
-         
+    String wordTwo;
+    do {System.out.print("Ingrese la segunda palabra: ");
+        wordTwo = input.nextLine().trim();
+        if (wordTwo.isEmpty()){
+            System.out.println("La palabra no puede estar vacia.");
+        }
+    } while (wordTwo.isEmpty());     
     //comparar si son iguales (sensible a mayus e insensible a mayus)
         System.out.println("¿Son iguales (sensible a mayúsculas)? " + wordOne.equals(wordTwo));
         System.out.println("¿Son iguales (ignorando mayúsculas)? " + wordOne.equalsIgnoreCase(wordTwo));
@@ -46,19 +38,34 @@ public class NewMain1 {
     
     //--------------------------------------------------------------------
     //solicitar texto
-        System.out.println("Ingresar texto: ");
-    String text = input.nextLine().trim();
+    String text;
+    
+    do {
+        System.out.print("Ingresar texto: ");
+        text = input.nextLine().trim();
+        if (text.isEmpty()){
+            System.out.println("El texto no puede estar vacio.");
+        }
+    } while (text.isEmpty());
+
     //solicitar palabra
+    String word;
+    do {
         System.out.print("Ingresar palabra: ");
-    String word = input.next().trim();
+        word = input.nextLine().trim();
+        if (word.isEmpty()){
+            System.out.println("La palabra no puede estar vacia.");
+        }
+    } while (word.isEmpty());
+
     //mostrar la ultima posicion donde aparece
     
     if (text.contains(word)){
         System.out.println("La palabra aparece en el texto.");
-        int lastIndex = text.lastIndexOf(word.charAt(word.length()-1));
+        int lastIndex = text.lastIndexOf(word);
         System.out.println("La ultima posicion donde aparece es: "+lastIndex);
+    }else {
+        System.out.println("La palabra no aparece en el texto. ");
     }
     
-  }//MAIN
-  
-}
+   }//comparacionesybusquedas
