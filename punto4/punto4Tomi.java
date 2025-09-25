@@ -1,29 +1,26 @@
-/*
- PUNTO 4: Validaciones Ingresar una contraseña: • Verificar si empieza con mayúscula • Verificar si termina en un número
- */
-import java.util.Scanner;
-
-public class Punto4 {
-
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+public static void validaciones(Scanner input) {
+        String passInput;
+        boolean valid, startsWithUpper, endsWithDigit;
+        
+        do{
         System.out.print("Ingrese contraseña: ");
-        String passInput = input.nextLine();
-        System.out.println("Contraseña ingresada: "+(passInput));   
-        
-        if (Character.isUpperCase(passInput.charAt(0))){
-            System.out.println("Comienza con mayuscula.");
+        passInput = input.nextLine().trim();
+        valid=true;
+        if (passInput.isEmpty()){
+            System.out.println("La contrasena no puede estar vacia.");
+            valid=false;
+        }else {
+            startsWithUpper=Character.isUpperCase(passInput.charAt(0));
+            if(!startsWithUpper){
+                System.out.println("Debe comenzar con mayuscula.");
+                valid=false;
             }
-        else{
-            System.out.println("No comienza con mayuscula.");
+            endsWithDigit=Character.isDigit(passInput.charAt(passInput.length()-1));
+            if (!endsWithDigit){
+                System.out.println("Debe terminar con numero.");
+                valid=false;
             }
-        
-        if (Character.isDigit(passInput.charAt(passInput.length()-1))){
-            System.out.println("Termina con numero.");
-        }else{
-            System.out.println("No termina con numero.");
         }
-        
-    }
-    
-}
+        }while(!valid);
+        System.out.println("Contrasena valida ingresada: " +passInput);
+        }
